@@ -1,0 +1,209 @@
+/* Reset some default styles to ensure consistency across browsers */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set a basic font style */
+body {
+  font: italic 1.2rem "Montserrat", serif;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  /* Per Firefox */
+  -ms-overflow-style: none;
+  /* Per Internet Explorer/Edge */
+}
+
+body::-webkit-scrollbar {
+  display: none;
+  /* Nasconde la barra di scorrimento per Chrome e Safari */
+}
+
+/* Style the header */
+header {
+  background-color: #333;
+  /* Background color for the header */
+  color: #fff;
+  /* Text color for the header */
+}
+
+#navbar-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+#logo-name {
+  text-decoration: none;
+  color: #fff;
+  font-size: 24px;
+}
+
+#navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+#navbar-right a {
+  text-decoration: none;
+  color: #fff;
+  margin: 0 10px;
+}
+
+
+/* BIOGRAFY */
+#my-biografy {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f2f2f2cb;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#my-biografy p {
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+#my-photo {
+  display: block;
+  margin: 20px auto;
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+
+/* Style the skills section */
+
+#my-skills {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+#my-skills h2 {
+  font-size: 24px;
+}
+
+#my-skills img {
+  max-width: 100px;
+  height: auto;
+  margin: 10px;
+}
+
+
+/* Style the footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social-icons a {
+  text-decoration: none;
+  color: #fff;
+  margin-right: 10px;
+
+}
+
+
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+/* Stile per ciascuna icona sociale */
+.social-icons a {
+  display: inline-block;
+  margin: 0 10px;
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #007bff;
+  /* Cambia il colore al passaggio del mouse */
+}
+
+/* Stile per il testo del copyright */
+#MK {
+  font-size: 14px;
+}
+
+/* Stile per le immagini delle icone sociali */
+.social-icons img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Stili responsive */
+@media (max-width: 768px) {
+  .social-icons {
+    margin-bottom: 10px;
+  }
+
+  .social-icons a {
+    margin: 0 5px;
+  }
+
+  #MK {
+    font-size: 12px;
+  }
+
+  .social-icons img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+/* Mobile Styles */
+@media only screen and (max-width: 400px) {
+  body {
+    background-color: #F09A9D;
+    /* Red */
+  }
+}
+
+/* Tablet Styles */
+@media only screen and (min-width: 401px) and (max-width: 960px) {}
+
+/* Desktop Styles */
+@media only screen and (min-width: 961px) {
+
+
+
+
+  .header {
+    height: 400px;
+  }
+
+ 
+
+  .content {
+    order: 2;
+  }
+}

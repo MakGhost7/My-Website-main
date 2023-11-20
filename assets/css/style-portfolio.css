@@ -1,0 +1,176 @@
+ /* Reset some default styles to ensure consistency across browsers */
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+ /* Set a basic font style */
+ body {
+     font: italic 1.2rem "Montserrat", serif;
+     overflow-y: scroll;
+     scrollbar-width: none;
+     /* Per Firefox */
+     -ms-overflow-style: none;
+     /* Per Internet Explorer/Edge */
+ }
+ 
+ body::-webkit-scrollbar {
+    display: none;
+    /* Nasconde la barra di scorrimento per Chrome e Safari */
+}
+
+ /* Style the header */
+ header {
+     background-color: #333;
+     /* Background color for the header */
+     color: #fff;
+     /* Text color for the header */
+ }
+
+ #navbar-div {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 5px 20px;
+     padding-bottom: 10px;
+ }
+
+ #logo-name {
+     text-decoration: none;
+     color: #fff;
+     font-size: 20px;
+ }
+
+ #navbar-left {
+     display: flex;
+     align-items: center;
+     font-size: 15px;
+ }
+
+ #navbar-right a {
+     text-decoration: none;
+     color: #fff;
+     margin: 0 10px;
+     font-size: 15px;
+ }
+
+ /* Stile del contenitore principale */
+ #cv {
+     max-width: 600px;
+     margin: 0 auto;
+     background-color: #fff;
+     padding: 20px;
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+ }
+
+ /* Stile dell'intestazione (Nome) */
+ #cv h1 {
+     font-size: 24px;
+     margin: 0;
+     color: #333;
+ }
+
+ /* Stile per i dettagli di contatto */
+ #cv p {
+     font-size: 16px;
+     margin: 5px 0;
+ }
+
+ /* Stile per il titolo delle sezioni (Esperienza Lavorativa, Formazione, Competenze Digitali) */
+ #cv h2 {
+     font-size: 20px;
+     margin: 20px 0 10px;
+     color: #333;
+ }
+
+ /* Stile per le voci di elenco (lavoro, formazione, competenze) */
+ #cv p strong {
+     font-weight: bold;
+ }
+
+/* Stile di base per il footer */
+ footer {
+     background-color: #333;
+     color: #fff;
+     padding: 10px 20px;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     margin-top: 427px;
+ }
+
+ /* Stile per ciascuna icona sociale */
+ .social-icons a {
+     display: inline-block;
+     margin: 0 10px;
+     text-decoration: none;
+     color: #fff;
+     transition: color 0.3s;
+ }
+
+ .social-icons a:hover {
+     color: #007bff;
+     /* Cambia il colore al passaggio del mouse */
+ }
+
+ /* Stile per il testo del copyright */
+ #MK {
+     font-size: 14px;
+ }
+
+ /* Stile per le immagini delle icone sociali */
+ .social-icons img {
+     width: 40px;
+     height: 40px;
+     object-fit: cover;
+     border-radius: 50%;
+ }
+
+ /* Stili responsive */
+ @media (max-width: 768px) {
+     .social-icons {
+         margin-bottom: 10px;
+     }
+
+     .social-icons a {
+         margin: 0 5px;
+     }
+
+     #MK {
+         font-size: 12px;
+     }
+
+     .social-icons img {
+         width: 30px;
+         height: 30px;
+     }
+ }
+
+ /* Mobile Styles */
+ @media only screen and (max-width: 400px) {
+     body {
+         background-color: #F09A9D;
+         /* Red */
+     }
+ }
+
+ /* Tablet Styles */
+ @media only screen and (min-width: 401px) and (max-width: 960px) {}
+
+ /* Desktop Styles */
+ @media only screen and (min-width: 961px) {
+
+     .header {
+         height: 400px;
+     }
+
+     .sign-up {
+         height: 200px;
+         order: 1;
+     }
+
+     .content {
+         order: 2;
+     }
+ }
