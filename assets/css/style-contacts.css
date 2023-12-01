@@ -34,7 +34,7 @@ body{
   font-family: montserrat;
 }
 nav{
-  background: #0082e6;
+  background: #333;
   height: 80px;
   width: 100%;
 }
@@ -116,11 +116,7 @@ a.active,a:hover{
     left: 0;
   }
 }
-section{
-  background: url(bg1.jpg) no-repeat;
-  background-size: cover;
-  height: calc(100vh - 80px);
-}
+
 
 
 #contancts {
