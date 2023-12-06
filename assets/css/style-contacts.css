@@ -127,7 +127,7 @@ a.active,a:hover{
   border-radius: 30px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   position: relative;
-  top: 160px;
+  top: 140px;
 }
 
 h2 {
@@ -183,7 +183,7 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 427px;
+  margin-top: 394px;
 }
 
 

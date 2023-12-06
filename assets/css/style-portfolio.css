@@ -127,7 +127,7 @@
  /* Stile del contenitore principale */
  #cv {
      max-width: 600px;
-     margin: 0 auto;
+     margin: 70px auto;
      background-color: #fff;
      padding: 20px;
      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -140,11 +140,7 @@
      color: #333;
  }
 
- /* Stile per i dettagli di contatto */
- #cv p {
-     font-size: 16px;
-     margin: 5px 0;
- }
+ 
 
  /* Stile per il titolo delle sezioni (Esperienza Lavorativa, Formazione, Competenze Digitali) */
  #cv h2 {
@@ -162,11 +158,10 @@
  footer {
      background-color: #333;
      color: #fff;
-     padding: 10px 20px;
+     padding: 11px 20px;
      display: flex;
      justify-content: space-between;
-     align-items: center;
-     margin-top: 427px;
+     align-items: center;   
  }
 
  /* Stile per ciascuna icona sociale */
