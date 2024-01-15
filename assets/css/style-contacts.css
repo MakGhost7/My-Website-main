@@ -1,137 +1,153 @@
-/* Reset some default styles to ensure consistency across browsers */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Set a basic font style */
 body {
-  font: italic 1.2rem "Montserrat", serif;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #181818; 
+  position: absolute;
+  max-width: 100%;
+  scrollbar-width: none;
+  /* For Firefox */
+  -ms-overflow-style: none;
+  /* For Internet Explorer/Edge */
 }
 
 body::-webkit-scrollbar {
   display: none;
-  /* Nasconde la barra di scorrimento per Chrome e Safari */
+}
+  /* Hide scrollbar for Chrome e Safari */
+
+a{
+  color: grey;
 }
 
-/* Style the header */
-header {
-  background-color: #333;
-  /* Background color for the header */
-  color: #fff;
-  /* Text color for the header */
-}
-
-*{
-  padding: 0;
-  margin: 0;
-  text-decoration: none;
-  list-style: none;
-  box-sizing: border-box;
-}
-body{
-  font-family: montserrat;
-}
-nav{
-  background: #333;
-  height: 80px;
+ /* Style the header */
+.header {
+  background-color: #212121;
+  box-shadow: 1px 1px 4px 0 rgba(0,0,0, .1);
+  position: fixed;
   width: 100%;
+  z-index: 1;
 }
-label.logo{
-  color: white;
-  font-size: 35px;
-  line-height: 80px;
-  padding: 0 100px;
-  font-weight: bold;
+
+.header ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: #212121;
 }
-nav ul{
+
+.header ul a {
+  display: block;
+  padding: 20px;
+  text-decoration: none;
+}
+
+.header ul a:hover{
+  background-color: #181818;
+}
+
+.header .logo{
+  float: left;
+  font-size: 25px;
+  padding: 10px 20px;
+}
+
+.header .menu{
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+}
+
+.header .menu-icon{
+  padding: 28px 20px;
+  position: relative;
   float: right;
-  margin-right: 20px;
-}
-nav ul li{
-  display: inline-block;
-  line-height: 80px;
-  margin: 0 5px;
-}
-nav ul li a{
-  color: white;
-  font-size: 17px;
-  padding: 7px 13px;
-  border-radius: 3px;
-  text-transform: uppercase;
-}
-a.active,a:hover{
-  background: #1b9bff;
-  transition: .5s;
-}
-.checkbtn{
-  font-size: 30px;
-  color: white;
-  float: right;
-  line-height: 80px;
-  margin-right: 40px;
   cursor: pointer;
-  display: none;
-}
-#check{
-  display: none;
-}
-@media (max-width: 952px){
-  label.logo{
-    font-size: 30px;
-    padding-left: 50px;
-  }
-  nav ul li a{
-    font-size: 16px;
-  }
-}
-@media (max-width: 858px){
-  .checkbtn{
-    display: block;
-  }
-  ul{
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    background: #2c3e50;
-    top: 80px;
-    left: -100%;
-    text-align: center;
-    transition: all .5s;
-  }
-  nav ul li{
-    display: block;
-    margin: 50px 0;
-    line-height: 30px;
-  }
-  nav ul li a{
-    font-size: 20px;
-  }
-  a:hover,a.active{
-    background: none;
-    color: #0082e6;
-  }
-  #check:checked ~ ul{
-    left: 0;
-  }
 }
 
+.header .menu-icon .nav-icon{
+  background-color: gray;
+  display: block;
+  width: 18px;
+  height: 2px;
+  position: relative;
+  transition: background-color .2s ease-out;
+}
 
+.header .menu-icon .nav-icon::before,
+.header .menu-icon .nav-icon::after{
+  background-color: gray;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  transition: all .2s ease-out;
+  position: absolute;
+}
 
+.header .menu-icon .nav-icon::before{
+  top: 5px;
+}
+.header .menu-icon .nav-icon::after{
+  top: -5px;
+}
+
+.header .menu-btn{
+  display: none; 
+}
+
+.header .menu-btn:checked ~ .menu{
+  max-height: 240px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .nav-icon{
+  background-color: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .nav-icon::before{
+  transform: rotate(-45deg);
+  top: 0;
+}
+.header .menu-btn:checked ~ .menu-icon .nav-icon::after{
+  transform: rotate(45deg);
+  top: 0;
+}
+
+@media (min-width: 48em) {
+  .header li{
+      float: left;
+  }
+
+  .header li a{
+      padding: 20px 30px;
+  }
+
+  .header .menu{
+      clear: none;
+      float: right;
+      max-height: 240px;
+  }
+
+  .header .menu-icon{
+      display: none;
+  }
+
+}
+ /* Contancts style */
 #contancts {
   max-width: 600px;
-  margin: 0 auto;
+  margin-right: -900%;
+  margin-left: 170%;
   padding: 20px;
-  border: 1px solid #ccc;
+  border: 1px solid #000000;
   border-radius: 30px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px gray;
   position: relative;
   top: 140px;
 }
 
 h2 {
-  color: #333;
+  color: #ffffff;
   text-align: center;
 }
 
@@ -143,11 +159,10 @@ form {
 label {
   margin-top: 10px;
   font-weight: bold;
-  color: #555;
+  color: #ffffff;
 }
 
-input,
-textarea {
+input,textarea {
   padding: 10px;
   margin-top: 5px;
   margin-bottom: 15px;
@@ -167,15 +182,7 @@ button {
 button:hover {
   background-color: #45a049;
 }
-
-/* Responsive styles */
-@media screen and (max-width: 600px) {
-  form {
-    grid-template-columns: 1fr;
-  }
-}
-
-
+ /* Style the footer */
 footer {
   background-color: #333;
   color: #fff;
@@ -183,12 +190,21 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 394px;
+  position: relative;
+  margin-top: 117%;
+  margin-right: -413%;
+  margin-left: 0%;
+  margin-bottom: -1%;
 }
 
+.social-icons a {
+  text-decoration: none;
+  color: #fff;
+  margin-right: 10px;
 
+}
 
-/* Stile per ciascuna icona sociale */
+/* Style for each social icon */
 .social-icons a {
   display: inline-block;
   margin: 0 10px;
@@ -197,17 +213,13 @@ footer {
   transition: color 0.3s;
 }
 
-.social-icons a:hover {
-  color: #007bff;
-  /* Cambia il colore al passaggio del mouse */
-}
 
-/* Stile per il testo del copyright */
+/* Style for copyright text */
 #MK {
   font-size: 14px;
 }
 
-/* Stile per le immagini delle icone sociali */
+/* Style for social icon images */
 .social-icons img {
   width: 40px;
   height: 40px;
@@ -215,68 +227,17 @@ footer {
   border-radius: 50%;
 }
 
-/* Stili responsive */
-@media (max-width: 768px) {
-  .social-icons {
-    margin-bottom: 10px;
+@media (max-width: 768px){
+  body{
+       max-width: 50%
   }
-
-  .social-icons a {
-    margin: 0 5px;
+  #contancts{
+       max-width: 80%;
+       margin-left: 50%;
+       margin-right: -55%;
   }
-
-  #MK {
-    font-size: 12px;
-  }
-
-  .social-icons img {
-    width: 30px;
-    height: 30px;
-  }
-}
-
-/* Mobile Styles */
-@media only screen and (max-width: 400px) {
-  body {
-    background-color: #F09A9D;
-    /* Red */
-  }
-}
-
-/* Tablet Styles */
-@media only screen and (min-width: 401px) and (max-width: 960px) {
-
-  .sign-up,
-  .feature-1,
-  .feature-2,
-  .feature-3 {
-    width: 50%;
-  }
-}
-
-/* Desktop Styles */
-@media only screen and (min-width: 961px) {
-  .page {
-    width: 960px;
-    margin: 0 auto;
-  }
-
-  .feature-1,
-  .feature-2,
-  .feature-3 {
-    width: 33.3%;
-  }
-
-  .header {
-    height: 400px;
-  }
-
-  .sign-up {
-    height: 200px;
-    order: 1;
-  }
-
-  .content {
-    order: 2;
+  footer{
+       margin-right: -100%;
+       margin-top: 210%;
   }
 }
