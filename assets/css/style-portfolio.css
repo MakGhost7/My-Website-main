@@ -1,4 +1,5 @@
 body {
+  margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   background-color: #181818; 
   position: absolute;
@@ -9,8 +10,12 @@ body {
  }
  
  body::-webkit-scrollbar {
-    display: none;
-    /* Nasconde la barra di scorrimento per Chrome e Safari */
+   display: none;
+}
+  /* Nasconde la barra di scorrimento per Chrome e Safari */
+
+a{
+  color: grey;
 }
 
  /* Style the header */
@@ -21,8 +26,6 @@ body {
   position: fixed;
   width: 100%;
   z-index: 1;
-  margin-top: -13px;
-  margin-left: -8px;
 }
 
 .header ul{
@@ -130,12 +133,12 @@ body {
   }
 
 }
-  
- /* Stile del contenitore principale */
- #cv{
+
+/* Stile del contenitore principale */
+#cv{
   margin-top: 5%;
   margin-left: 40%;
-  margin-right: 30%;
+  margin-right: 25%;
  }
  /* Stile dell'intestazione (Nome) */
  #cv h1 {
@@ -146,7 +149,7 @@ body {
 
  /* Stile per il titolo delle sezioni (Esperienza Lavorativa, Formazione, Competenze Digitali) */
  #cv h2 {
-  font-size: 20px;
+  font-size: 18px;
   margin: 20px 0 10px;
   color: #fff;
  }
@@ -160,39 +163,46 @@ body {
   color: #fff;
  }
 
-/* Stile di base per il footer */
- footer {
-  background-color: #333(170, 31, 31);
+ /* Style the footer */
+footer {
+  background-color: #333;
   color: #fff;
-  padding: 11px 20px;
+  padding: 10px 20px;
   display: flex;
   justify-content: space-between;
-  align-items: center;   
- }
+  align-items: center;
+  margin-top: 11%;
+  margin-right: -13%;
+}
 
- /* Stile per ciascuna icona sociale */
- .social-icons a {
+.social-icons a {
+  text-decoration: none;
+  color: #fff;
+  margin-right: 10px;
+
+}
+
+/* Style for each social icon */
+.social-icons a {
   display: inline-block;
   margin: 0 10px;
   text-decoration: none;
   color: #fff;
   transition: color 0.3s;
- }
+}
 
- /* Stile per il testo del copyright */
- #MK {
+
+/* Style for copyright text */
+#MK {
   font-size: 14px;
- }
+  margin-left: -9%;
+}
 
- /* Stile per le immagini delle icone sociali */
- .social-icons img {
-   width: 40px;
-   height: 40px;
-   object-fit: cover;
-   border-radius: 50%;
- }
-
- @media only screen and (min-width: 769px) and (max-width: 1025px){
-  
- }
+/* Style for social icon images */
+.social-icons img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+}
  

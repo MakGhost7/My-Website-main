@@ -4,9 +4,9 @@ body {
   background-color: #181818; 
   position: absolute;
   scrollbar-width: none;
-     /* Per Firefox */
-     -ms-overflow-style: none;
-     /* Per Internet Explorer/Edge */
+  /* For Firefox */
+  -ms-overflow-style: none;
+  /* For Internet Explorer/Edge */
 }
 
 body::-webkit-scrollbar {
@@ -18,7 +18,7 @@ a{
   color: grey;
 }
 
-
+ /* Style the header */
 .header {
   background-color: #212121;
   box-shadow: 1px 1px 4px 0 rgba(0,0,0, .1);
